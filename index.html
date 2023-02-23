@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="index.css">
+
+    <!-- icon resource -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- font resource -->
+    <link id="googleFonts" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800%7COpen+Sans:400,700,800&display=swap" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+    <nav class="container">
+        <img src="https://storage.googleapis.com/danacita-website-v3-prd/website_v3/images/Revou-alasan.original.png" class="logo" width="60" height="60" alt="">
+            <a href="index.html">Home</a>
+            <a href="profile.html">Our Profile</a>
+            <a href="#">Portofolio</a>
+            <a href="#">Message Us</a>
+    </nav>
+    <hr>
+
+    <header>
+    <div style="height: 435px;">
+    <h2><span id="nama"></span>Welcome To Grace Website</h2>
+    <img src="https://img.pikbest.com/png-images/20211011/focused-people-studying-in-online-school_6139981.png!bw700" width="300px" height="300px"alt="">
+    <h3 style="text-align: center;">“Pendidikan adalah senjata paling mematikan di dunia, karena dengan pendidikan, Anda dapat mengubah dunia.” – Nelson Mandela</h3>
+    </div>
+    </header> 
+
+    <!-- <script>
+        var nama = prompt("Masukan nama kamu");
+        document.getElementById("nama").innerText = nama;
+    </script> -->
+
+    <hr>
+    <header>
+        <h1>Our Headquarter</h1>
+    </header>
+    <main class="content">
+        <div>
+            <img src="https://pict.sindonews.net/dyn/850/pena/news/2021/02/26/173/348284/beragam-nama-jakarta-sejak-tahun-397-sampai-sekarang-txm.jpg" class="lingkaran" alt="">
+            <p style="margin-left: 45px;">Jakarta</p>
+        </div>
+        <div>
+            <img src="https://i0.wp.com/bandungaktual.com/wp-content/uploads/2020/07/Gedung-Sate-e1596881444712-1.jpg?resize=640%2C359&ssl=1" class="lingkaran" alt="">
+            <p style="margin-left: 45px;">Bandung</p>
+        </div>
+        <div>
+            <img src="https://www.suarasurabaya.net/wp-content/uploads/2018/01/kk198049_clip10.jpg" class="lingkaran" alt="">
+            <p style="margin-left: 45px;">Surabaya</p>
+        </div>
+    </main>
+    <hr>
+    <header>
+        <h1>Message Us</h1>
+    </header>
+
+    <main class="content">
+        <div style="margin-right: 50px;">
+        <form class="form" name="message-form" onsubmit="return validateForm()">
+            <div class="input-group">
+                <label class="label">Nama</label> : &ThinSpace;
+                <div class="textbox">
+                    <input type="text" name="nama" placeholder="Nama">
+                </div>
+            </div>
+            <div class="input-group">
+                <label class="label">Tanggal Lahir</label> : &ThinSpace;
+                <div class="textbox">
+                    <input type="date" name="tgl" id="">
+                </div>
+            </div>
+            <div class="input-group">
+                <label class="label">Jenis Kelamin</label> : &ThinSpace;
+                <div class="textbox">
+                    <div>
+                        <input type="radio" id="lakilaki" name="jk" value="Laki-laki">
+                        <label for="lakilaki">Laki-laki</label>
+                        <input type="radio" id="perempuan" name="jk" value="Perempuan">
+                        <label for="perempuan">Perempuan</label>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <label class="label">Pesan</label>  : &ThinSpace;
+                <div class="textbox">
+                    <textarea name="pesan" id="" cols="30" rows="3" placeholder="Pesan"></textarea>
+                </div>
+            </div>
+            
+            <input type="submit" value="submit">
+        </form>
+
+        <script>
+            function validateForm() {
+                var nama = document.forms["message-form"]["nama"].value;
+                var tgl = document.forms["message-form"]["tgl"].value;
+                var jk = document.forms["message-form"]["jk"].value;
+                var pesan = document.forms["message-form"]["pesan"].value;
+
+                if(nama==""||tgl==""||jk==""||pesan==""){
+                    alert("Input tidak boleh kosong");
+                    return false;
+                }
+
+                document.getElementById("sender_nama").innerText=nama;
+                document.getElementById("sender_tgl").innerText=tgl;
+                document.getElementById("sender_jk").innerText=jk;
+                document.getElementById("sender_pesan").innerText=pesan;
+                return false;
+            }
+        </script>
+
+        </div>
+    <div class="box1"><br> 
+        <p style="margin-top: 25px;">Nama : <span id="sender_nama"></span></p>
+        <p>Tanggal : <span id="sender_tgl"></span></p>
+        <p>Jenis Kelamin : <span id="sender_jk"></span></p>
+        <p>Pesan : <span id="sender_pesan"></span></p>
+    </div>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>Created By RevoU</p>
+    </footer>
+</body>
+</html>
